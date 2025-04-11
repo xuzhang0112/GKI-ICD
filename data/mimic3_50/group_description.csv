@@ -1,0 +1,36 @@
+group	name
+001-139	infectious and parasitic diseases
+240-279	endocrine, nutritional and metabolic diseases, and immunity disorders
+280-289	diseases of the blood and blood-forming organs
+290-359	mental disorders
+390-459	diseases of the circulatory system
+460-519	diseases of the respiratory system
+520-579	diseases of the digestive system
+580-629	diseases of the genitourinary system
+800-999	injury and poisoning
+V01-V99	Factors influencing Health Status and Contact with Health Services
+030-041   	other bacterial diseases
+240-246   	disorders of thyroid gland
+249-259   	diseases of other endocrine glands
+270-279   	other metabolic and immunity disorders
+280-285   	anemia
+286-287   	coagulation/hemorrhagic
+300-316   	neurotic disorders, personality disorders, and other nonpsychotic mental disorders
+401-405   	hypertensive disease
+410-414   	ischemic heart disease
+420-429   	other forms of heart disease
+480-488   	pneumonia and influenza
+490-496   	chronic obstructive pulmonary disease and allied conditions
+500-508   	pneumoconioses and other lung diseases due to external agents
+510-519   	other diseases of respiratory system
+530-539   	diseases of esophagus, stomach, and duodenum
+580-589   	nephritis, nephrotic syndrome, and nephrosis
+590-599   	other diseases of urinary system
+990-995   	other and unspecified effects of external causes
+V10-V19   	ersons with potential health hazards related to personal and family history
+V40-V49   	ersons with a condition influencing their health status
+V50-V59   	ersons encountering health services for specific procedures and aftercare
+30-34	operations on the respiratory system
+35-39	operations on the cardiovascular system
+42-54	operations on the digestive system
+87-99	miscellaneous diagnostic and therapeuticprocedures

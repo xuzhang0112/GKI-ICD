@@ -1,0 +1,206 @@
+group	name
+001-139	infectious and parasitic diseases
+140-239	neoplasms
+240-279	endocrine, nutritional and metabolic diseases, and immunity disorders
+280-289	diseases of the blood and blood-forming organs
+290-359	mental disorders
+360-389	diseases of the nervous system and sense organs
+390-459	diseases of the circulatory system
+460-519	diseases of the respiratory system
+520-579	diseases of the digestive system
+580-629	diseases of the genitourinary system
+630-679	complications of pregnancy, childbirth, and the puerperium
+680-709	diseases of the skin and subcutaneous tissue
+710-739	diseases of the musculoskeletal system and connective tissue
+740-759	congenital anomalies
+760-779	certain conditions originating in the perinatal period
+780-799	symptoms, signs, and ill-defined conditions
+800-999	injury and poisoning
+E000-E999	External Causes of Injury and Poisoning
+V01-V99	Factors influencing Health Status and Contact with Health Services
+001-009   	intestinal infectious diseases
+010-018   	tuberculosis
+020-027   	zoonotic bacterial diseases
+030-041   	other bacterial diseases
+042-044   	human immunodeficiency virus
+045-049   	poliomyelitis and other non-arthropod-borne viral diseases of central nervous system
+050-059   	viral diseases accompanied by exanthem
+060-066   	arthropod-borne viral diseases
+070-079   	other diseases due to viruses and chlamydiota
+080-088   	rickettsioses and other arthropod-borne diseases
+090-099   	syphilis and other venereal diseases
+110-118   	mycoses
+120-129   	helminthiases
+130-136   	other infectious and parasitic diseases
+137-139   	late effects of infectious and parasitic diseases
+140-149   	malignant neoplasm of lip, oral cavity, and pharynx
+150-159   	malignant neoplasm of digestive organs and peritoneum
+160-165   	malignant neoplasm of respiratory and intrathoracic organs
+170-175   	malignant neoplasm of bone, connective tissue, skin, and breast
+176-176   	kaposi's sarcoma
+179-189   	malignant neoplasm of genitourinary organs
+190-199   	malignant neoplasm of other and unspecified sites
+200-208   	malignant neoplasm of lymphatic and hematopoietic tissue
+209-209   	neuroendocrine tumors
+210-229   	benign neoplasms
+230-234   	carcinoma in situ
+235-238   	neoplasms of uncertain behavior
+239-239   	neoplasms of unspecified nature
+240-246   	disorders of thyroid gland
+249-259   	diseases of other endocrine glands
+260-269   	nutritional deficiencies
+270-279   	other metabolic and immunity disorders
+280-285   	anemia
+286-287   	coagulation/hemorrhagic
+288-289   	other
+290-299   	psychosis
+300-316   	neurotic disorders, personality disorders, and other nonpsychotic mental disorders
+317-319   	mental retardation
+320-327   	inflammatory diseases of the central nervous system
+330-337   	hereditary and degenerative diseases of the central nervous system
+338-338   	pain
+339-339   	other headache syndromes
+340-349   	other disorders of the central nervous system
+350-359   	disorders of the peripheral nervous system
+360-379   	disorders of the eye and adnexa
+380-389   	diseases of the ear and mastoid process
+390-392   	acute rheumatic fever
+393-398   	chronic rheumatic heart disease
+401-405   	hypertensive disease
+410-414   	ischemic heart disease
+415-417   	diseases of pulmonary circulation
+420-429   	other forms of heart disease
+430-438   	cerebrovascular disease
+440-449   	diseases of arteries, arterioles, and capillaries
+451-459   	diseases of veins and lymphatics, and other diseases of circulatory system
+460-466   	acute respiratory infections
+470-478   	other diseases of the upper respiratory tract
+480-488   	pneumonia and influenza
+490-496   	chronic obstructive pulmonary disease and allied conditions
+500-508   	pneumoconioses and other lung diseases due to external agents
+510-519   	other diseases of respiratory system
+520-529   	diseases of oral cavity, salivary glands, and jaws
+530-539   	diseases of esophagus, stomach, and duodenum
+540-543   	appendicitis
+550-553   	hernia of abdominal cavity
+555-558   	noninfectious enteritis and colitis
+560-569   	other diseases of intestines and peritoneum
+570-579   	other diseases of digestive system
+580-589   	nephritis, nephrotic syndrome, and nephrosis
+590-599   	other diseases of urinary system
+600-608   	diseases of male genital organs
+610-612   	disorders of breast
+614-616   	inflammatory disease of female pelvic organs
+617-629   	other disorders of female genital tract
+630-633   	ectopic and molar pregnancy
+634-639   	other pregnancy with abortive outcome
+640-649   	complications mainly related to pregnancy
+650-659   	normal delivery, and other indications for care in pregnancy, labor, and delivery
+660-669   	complications occurring mainly in the course of labor and delivery
+670-677   	complications of the puerperium
+680-686   	infections of skin and subcutaneous tissue
+690-698   	other inflammatory conditions of skin and subcutaneous tissue
+700-709   	other diseases of skin and subcutaneous tissue
+710-719   	arthropathies and related disorders
+720-724   	dorsopathies
+725-729   	rheumatism, excluding the back
+730-739   	osteopathies, chondropathies, and acquired musculoskeletal deformities
+740-742   	nervous system
+743-744   	eye, ear, face and neck
+745-747   	circulatory system
+748-748   	respiratory system
+749-751   	digestive system
+752-752   	genital organs
+753-753   	urinary system
+754-756   	musculoskeletal system
+757-757   	integument
+758-758   	chromosomal anomalies
+759-759   	other
+760-763   	maternal causes of perinatal morbidity and mortality
+764-779   	other conditions originating in the perinatal period
+780-789   	symptoms
+790-796   	nonspecific abnormal findings
+797-799   	ill-defined and unknown causes of morbidity and mortality
+800-804   	fracture of skull
+805-809   	fracture of neck and trunk
+810-819   	fracture of upper limb
+820-829   	fracture of lower limb
+830-839   	dislocation
+840-848   	sprains and strains of joints and adjacent muscles
+850-854   	intracranial injury, excluding those with skull fracture
+860-869   	internal injury of thorax, abdomen, and pelvis
+870-879   	open wound of head, neck, and trunk
+880-887   	open wound of upper limb
+890-897   	open wound of lower limb
+900-904   	injury to blood vessels
+905-909   	late effects of injuries, poisonings, toxic effects, and other external causes
+910-919   	superficial injury
+920-924   	contusion with intact skin surface
+925-929   	crushing injury
+930-939   	effects of foreign body entering through body orifice
+940-949   	burns
+950-957   	injury to nerves and spinal cord
+958-959   	certain traumatic complications and unspecified injuries
+960-979   	poisoning by drugs, medicinal and biological substances
+980-989   	toxic effects of substances chiefly nonmedicinal as to source
+990-995   	other and unspecified effects of external causes
+996-999   	complications of surgical and medical care, not elsewhere classified
+E000-E000 	external cause status
+E001-E030 	activity
+E800-E807 	railway accidents
+E810-E819 	motor vehicle traffic accidents
+E820-E825 	motor vehicle non-traffic accidents
+E826-E829 	other road vehicle accidents
+E830-E838 	water transport accidents
+E840-E845 	air and space transport accidents
+E846-E849 	vehicle accidents not elsewhere classifiable
+E850-E858 	accidental poisoning by drugs, medicinal substances, and biologicals
+E860-E869 	accidental poisoning by other solid and liquid substances, gases, and vapors
+E870-E876 	misadventures to patients during surgical and medical care
+E878-E879 	surgical and medical procedures as the cause of abnormal reaction of patient or later complication, without mention of misadventure at the time of procedure
+E880-E888 	accidental falls
+E890-E899 	accidents caused by fire and flames
+E900-E909 	accidents due to natural and environmental factors
+E910-E915 	accidents caused by submersion, suffocation, and foreign bodies
+E916-E928 	other accidents
+E929-E929 	late effects of accidental injury
+E930-E949 	drugs, medicinal and biological substances causing adverse effects in therapeutic use
+E950-E959 	suicide and self-inflicted injury
+E960-E969 	homicide and injury purposely inflicted by other persons
+E970-E979 	legal intervention
+E980-E989 	injury undetermined whether accidentally or purposely inflicted
+E990-E999 	injury resulting from operations of war
+V01-V06   	ersons with potential health hazards related to communicable diseases
+V07-V09   	ersons with need for isolation, other potential health hazards and prophylactic measures
+V10-V19   	ersons with potential health hazards related to personal and family history
+V20-V29   	ersons encountering health services in circumstances related to reproduction and development
+V30-V39   	ive-born infants according to type of birth
+V40-V49   	ersons with a condition influencing their health status
+V50-V59   	ersons encountering health services for specific procedures and aftercare
+V60-V69   	ersons encountering health services in other circumstances
+V70-V82   	ersons without reported diagnosis encountered during examination and investigation of individuals and populations
+V83-V84   	enetics
+V85-V85   	body mass index
+V86-V86   	estrogen receptor status
+V87-V87   	other specified personal exposures and history presenting hazards to health
+V88-V88   	acquired absence of other organs and tissue
+V90-V90   	retained foreign body
+V91-V91   	multiple gestation placenta statu
+00-00	procedures and interventions , not elsewhereclassified
+01-05	operations on the nervous system
+06-07	operations on the endocrine system
+08-16	operations on the eye
+17-17	other miscellaneous diagnostic andtherapeutic procedures
+18-20	operations on the ear
+21-29	operations on the nose, mouth, and pharynx
+30-34	operations on the respiratory system
+35-39	operations on the cardiovascular system
+40-41	operations on the hemic and lymphatic system
+42-54	operations on the digestive system
+55-59	operations on the urinary system
+60-64	operations on the male genital organs
+65-71	operations on the female genital organs
+72-75	obstetrical procedures
+76-84	operations on the musculoskeletal system
+85-86	operations on the integumentary system
+87-99	miscellaneous diagnostic and therapeuticprocedures

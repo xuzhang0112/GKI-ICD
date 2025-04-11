@@ -1,0 +1,1064 @@
+code	desc
+00	procedures and interventions, not elsewhere classified
+003	other salmonella infections
+004	shigellosis
+005	other food poisoning (bacterial)
+007	other protozoal intestinal diseases
+008	intestinal infections due to other organisms
+009	ill-defined intestinal infections
+01	incision and excision of skull, brain, and cerebral meninges
+010	primary tuberculous infection
+011	pulmonary tuberculosis
+012	other respiratory tuberculosis
+013	tuberculosis of meninges and central nervous system
+014	tuberculosis of intestines, peritoneum, and mesenteric glands
+015	tuberculosis of bones and joints
+018	miliary tuberculosis
+02	other operations on skull, brain, and cerebral meninges
+021	tularemia
+023	brucellosis
+027	other zoonotic bacterial diseases
+03	operations on spinal cord and spinal canal structures
+030	leprosy
+031	diseases due to other mycobacteria
+032	diphtheria
+033	whooping cough
+034	streptococcal sore throat and scarlet fever
+036	meningococcal infection
+038	septicemia
+039	actinomycotic infections
+04	operations on cranial and peripheral nerves
+040	other bacterial diseases
+041	bacterial infection in conditions classified elsewhere and of unspecified site
+045	acute poliomyelitis
+046	slow virus infection of central nervous system
+047	meningitis due to enterovirus
+049	other non-arthropod-borne viral diseases of central nervous system
+05	operations on sympathetic nerves or ganglia
+052	chickenpox
+053	herpes zoster
+054	herpes simplex
+057	other viral exanthemata
+058	other human herpesvirus
+06	operations on thyroid and parathyroid glands
+062	mosquito-borne viral encephalitis
+066	other arthropod-borne viral diseases
+07	operations on other endocrine glands
+070	viral hepatitis
+077	other diseases of conjunctiva due to viruses and chlamydiae
+078	other diseases due to viruses and chlamydiae
+079	viral and chlamydial infection in conditions classified elsewhere and of unspecified site
+08	operations on eyelids
+082	tick-borne rickettsioses
+083	other rickettsioses
+084	malaria
+085	leishmaniasis
+086	trypanosomiasis
+088	other arthropod-borne diseases
+09	operations on lacrimal system
+090	congenital syphilis
+091	early syphilis, symptomatic
+093	cardiovascular syphilis
+094	neurosyphilis
+097	other and unspecified syphilis
+098	gonococcal infections
+099	other venereal diseases
+10	operations on conjunctiva
+11	operations on cornea
+110	dermatophytosis
+111	dermatomycosis, other and unspecified
+112	candidiasis
+114	coccidioidomycosis
+115	histoplasmosis
+116	blastomycotic infection
+117	other mycoses
+12	operations on iris, ciliary body, sclera, and anterior chamber
+120	schistosomiasis [bilharziasis]
+121	other trematode infections
+122	echinococcosis
+123	other cestode infection
+125	filarial infection and dracontiasis
+127	other intestinal helminthiases
+13	operations on lens
+130	toxoplasmosis
+131	trichomoniasis
+132	pediculosis and phthirus infestation
+133	acariasis
+134	other infestation
+136	other and unspecified infectious and parasitic diseases
+137	late effects of tuberculosis
+139	late effects of other infectious and parasitic diseases
+14	operations on retina, choroid, vitreous, and posterior chamber
+140	malignant neoplasm of lip
+141	malignant neoplasm of tongue
+142	malignant neoplasm of major salivary glands
+143	malignant neoplasm of gum
+144	malignant neoplasm of floor of mouth
+145	malignant neoplasm of other and unspecified parts of mouth
+146	malignant neoplasm of oropharynx
+147	malignant neoplasm of nasopharynx
+148	malignant neoplasm of hypopharynx
+149	malignant neoplasm of other and ill-defined sites within the lip, oral cavity, and pharynx
+15	operations on extraocular muscles
+150	malignant neoplasm of esophagus
+151	malignant neoplasm of stomach
+152	malignant neoplasm of small intestine, including duodenum
+153	malignant neoplasm of colon
+154	malignant neoplasm of rectum, rectosigmoid junction, and anus
+155	malignant neoplasm of liver and intrahepatic bile ducts
+156	malignant neoplasm of gallbladder and extrahepatic bile ducts
+157	malignant neoplasm of pancreas
+158	malignant neoplasm of retroperitoneum and peritoneum
+159	malignant neoplasm of other and ill-defined sites within the digestive organs and peritoneum
+16	operations on orbit and eyeball
+160	malignant neoplasm of nasal cavities, middle ear, and accessory sinuses
+161	malignant neoplasm of larynx
+162	malignant neoplasm of trachea, bronchus, and lung
+163	malignant neoplasm of pleura
+164	malignant neoplasm of thymus, heart, and mediastinum
+17	other miscellaneous procedures
+170	malignant neoplasm of bone and articular cartilage
+171	malignant neoplasm of connective and other soft tissue
+172	malignant melanoma of skin
+173	other malignant neoplasm of skin
+174	malignant neoplasm of female breast
+175	malignant neoplasm of male breast
+176	kaposi&apos;s sarcoma
+18	operations on external ear
+180	malignant neoplasm of cervix uteri
+182	malignant neoplasm of body of uterus
+183	malignant neoplasm of ovary and other uterine adnexa
+184	malignant neoplasm of other and unspecified female genital organs
+186	malignant neoplasm of testis
+187	malignant neoplasm of penis and other male genital organs
+188	malignant neoplasm of bladder
+189	malignant neoplasm of kidney and other and unspecified urinary organs
+19	reconstructive operations on middle ear
+190	malignant neoplasm of eye
+191	malignant neoplasm of brain
+192	malignant neoplasm of other and unspecified parts of nervous system
+194	malignant neoplasm of other endocrine glands and related structures
+195	malignant neoplasm of other and ill-defined sites
+196	secondary and unspecified malignant neoplasm of lymph nodes
+197	secondary malignant neoplasm of respiratory and digestive systems
+198	secondary malignant neoplasm of other specified sites
+199	malignant neoplasm without specification of site
+20	other operations on middle and inner ear
+200	lymphosarcoma and reticulosarcoma and other specified malignant tumors of lymphatic tissue
+201	hodgkin&apos;s disease
+202	other malignant neoplasms of lymphoid and histiocytic tissue
+203	multiple myeloma and immunoproliferative neoplasms
+204	lymphoid leukemia
+205	myeloid leukemia
+206	monocytic leukemia
+207	other specified leukemia
+208	leukemia of unspecified cell type
+209	neuroendocrine tumors
+21	operations on nose
+210	benign neoplasm of lip, oral cavity, and pharynx
+211	benign neoplasm of other parts of digestive system
+212	benign neoplasm of respiratory and intrathoracic organs
+213	benign neoplasm of bone and articular cartilage
+214	lipoma
+215	other benign neoplasm of connective and other soft tissue
+216	benign neoplasm of skin
+218	uterine leiomyoma
+219	other benign neoplasm of uterus
+22	operations on nasal sinuses
+221	benign neoplasm of other female genital organs
+223	benign neoplasm of kidney and other urinary organs
+225	benign neoplasm of brain and other parts of nervous system
+227	benign neoplasm of other endocrine glands and related structures
+228	hemangioma and lymphangioma, any site
+229	benign neoplasm of other and unspecified sites
+23	removal and restoration of teeth
+230	carcinoma in situ of digestive organs
+231	carcinoma in situ of respiratory system
+232	carcinoma in situ of skin
+233	carcinoma in situ of breast and genitourinary system
+235	neoplasm of uncertain behavior of digestive and respiratory systems
+236	neoplasm of uncertain behavior of genitourinary organs
+237	neoplasm of uncertain behavior of endocrine glands and nervous system
+238	neoplasm of uncertain behavior of other and unspecified sites and tissues
+239	neoplasms of unspecified nature
+24	other operations on teeth, gums, and alveoli
+240	simple and unspecified goiter
+241	nontoxic nodular goiter
+242	thyrotoxicosis with or without goiter
+244	acquired hypothyroidism
+245	thyroiditis
+246	other disorders of thyroid
+249	secondary diabetes mellitus
+25	operations on tongue
+250	diabetes mellitus
+251	other disorders of pancreatic internal secretion
+252	disorders of parathyroid gland
+253	disorders of the pituitary gland and its hypothalamic control
+254	diseases of thymus gland
+255	disorders of adrenal glands
+256	ovarian dysfunction
+257	testicular dysfunction
+258	polyglandular dysfunction and related disorders
+259	other endocrine disorders
+26	operations on salivary glands and ducts
+263	other and unspecified protein-calorie malnutrition
+265	thiamine and niacin deficiency states
+266	deficiency of b-complex components
+268	vitamin d deficiency
+269	other nutritional deficiencies
+27	other operations on mouth and face
+270	disorders of amino-acid transport and metabolism
+271	disorders of carbohydrate transport and metabolism
+272	disorders of lipoid metabolism
+273	disorders of plasma protein metabolism
+274	gout
+275	disorders of mineral metabolism
+276	disorders of fluid, electrolyte, and acid-base balance
+277	other and unspecified disorders of metabolism
+278	overweight, obesity and other hyperalimentation
+279	disorders involving the immune mechanism
+28	operations on tonsils and adenoids
+280	iron deficiency anemias
+281	other deficiency anemias
+282	hereditary hemolytic anemias
+283	acquired hemolytic anemias
+284	aplastic anemia and other bone marrow failure syndromes
+285	other and unspecified anemias
+286	coagulation defects
+287	purpura and other hemorrhagic conditions
+288	diseases of white blood cells
+289	other diseases of blood and blood-forming organs
+29	operations on pharynx
+290	dementias
+291	alcohol-induced mental disorders
+292	drug-induced mental disorders
+293	transient mental disorders due to conditions classified elsewhere
+294	persistent mental disorders due to conditions classified elsewhere
+295	schizophrenic disorders
+296	episodic mood disorders
+297	paranoid states (delusional disorders)
+298	other nonorganic psychoses
+299	pervasive developmental disorders
+30	excision of larynx
+300	anxiety, dissociative and somatoform disorders
+301	personality disorders
+302	sexual and gender identity disorders
+303	alcohol dependence syndrome
+304	drug dependence
+305	nondependent abuse of drugs
+306	physiological malfunction arising from mental factors
+307	special symptoms or syndromes, not elsewhere classified
+308	acute reaction to stress
+309	adjustment reaction
+31	other operations on larynx and trachea
+310	specific nonpsychotic mental disorders due to brain damage
+312	disturbance of conduct, not elsewhere classified
+313	disturbance of emotions specific to childhood and adolescence
+314	hyperkinetic syndrome of childhood
+315	specific delays in development
+318	other specified mental retardation
+32	excision of lung and bronchus
+320	bacterial meningitis
+321	meningitis due to other organisms
+322	meningitis of unspecified cause
+323	encephalitis, myelitis, and encephalomyelitis
+324	intracranial and intraspinal abscess
+327	organic sleep disorders
+33	other operations on lung and bronchus
+330	cerebral degenerations usually manifest in childhood
+331	other cerebral degenerations
+332	parkinson&apos;s disease
+333	other extrapyramidal disease and abnormal movement disorders
+334	spinocerebellar disease
+335	anterior horn cell disease
+336	other diseases of spinal cord
+337	disorders of the autonomic nervous system
+338	pain, not elsewhere classified
+339	other headache syndromes
+34	operations on chest wall, pleura, mediastinum, and diaphragm
+341	other demyelinating diseases of central nervous system
+342	hemiplegia and hemiparesis
+343	infantile cerebral palsy
+344	other paralytic syndromes
+345	epilepsy and recurrent seizures
+346	migraine
+347	cataplexy and narcolepsy
+348	other conditions of brain
+349	other and unspecified disorders of the nervous system
+35	operations on valves and septa of heart
+350	trigeminal nerve disorders
+351	facial nerve disorders
+352	disorders of other cranial nerves
+353	nerve root and plexus disorders
+354	mononeuritis of upper limb and mononeuritis multiplex
+355	mononeuritis of lower limb
+356	hereditary and idiopathic peripheral neuropathy
+357	inflammatory and toxic neuropathy
+358	myoneural disorders
+359	muscular dystrophies and other myopathies
+36	operations on vessels of heart
+360	disorders of the globe
+361	retinal detachments and defects
+362	other retinal disorders
+363	chorioretinal inflammations, scars, and other disorders of choroid
+364	disorders of iris and ciliary body
+365	glaucoma
+366	cataract
+367	disorders of refraction and accommodation
+368	visual disturbances
+369	blindness and low vision
+37	other operations on heart and pericardium
+370	keratitis
+371	corneal opacity and other disorders of cornea
+372	disorders of conjunctiva
+373	inflammation of eyelids
+374	other disorders of eyelids
+375	disorders of lacrimal system
+376	disorders of the orbit
+377	disorders of optic nerve and visual pathways
+378	strabismus and other disorders of binocular eye movements
+379	other disorders of eye
+38	incision, excision, and occlusion of vessels
+380	disorders of external ear
+381	nonsuppurative otitis media and eustachian tube disorders
+382	suppurative and unspecified otitis media
+383	mastoiditis and related conditions
+384	other disorders of tympanic membrane
+385	other disorders of middle ear and mastoid
+386	vertiginous syndromes and other disorders of vestibular system
+387	otosclerosis
+388	other disorders of ear
+389	hearing loss
+39	other operations on vessels
+391	rheumatic fever with heart involvement
+394	diseases of mitral valve
+395	diseases of aortic valve
+396	diseases of mitral and aortic valves
+397	diseases of other endocardial structures
+398	other rheumatic heart disease
+40	operations on lymphatic system
+401	essential hypertension
+402	hypertensive heart disease
+403	hypertensive chronic kidney disease
+404	hypertensive heart and chronic kidney disease
+405	secondary hypertension
+41	operations on bone marrow and spleen
+410	acute myocardial infarction
+411	other acute and subacute forms of ischemic heart disease
+413	angina pectoris
+414	other forms of chronic ischemic heart disease
+415	acute pulmonary heart disease
+416	chronic pulmonary heart disease
+417	other diseases of pulmonary circulation
+42	operations on esophagus
+420	acute pericarditis
+421	acute and subacute endocarditis
+422	acute myocarditis
+423	other diseases of pericardium
+424	other diseases of endocardium
+425	cardiomyopathy
+426	conduction disorders
+427	cardiac dysrhythmias
+428	heart failure
+429	ill-defined descriptions and complications of heart disease
+43	incision and excision of stomach
+432	other and unspecified intracranial hemorrhage
+433	occlusion and stenosis of precerebral arteries
+434	occlusion of cerebral arteries
+435	transient cerebral ischemia
+437	other and ill-defined cerebrovascular disease
+438	late effects of cerebrovascular disease
+44	other operations on stomach
+440	atherosclerosis
+441	aortic aneurysm and dissection
+442	other aneurysm
+443	other peripheral vascular disease
+444	arterial embolism and thrombosis
+445	atheroembolism
+446	polyarteritis nodosa and allied conditions
+447	other disorders of arteries and arterioles
+448	disease of capillaries
+45	incision, excision, and anastomosis of intestine
+451	phlebitis and thrombophlebitis
+453	other venous embolism and thrombosis
+454	varicose veins of lower extremities
+455	hemorrhoids
+456	varicose veins of other sites
+457	noninfectious disorders of lymphatic channels
+458	hypotension
+459	other disorders of circulatory system
+46	other operations on intestine
+461	acute sinusitis
+464	acute laryngitis and tracheitis
+465	acute upper respiratory infections of multiple or unspecified sites
+466	acute bronchitis and bronchiolitis
+47	operations on appendix
+471	nasal polyps
+472	chronic pharyngitis and nasopharyngitis
+473	chronic sinusitis
+474	chronic disease of tonsils and adenoids
+477	allergic rhinitis
+478	other diseases of upper respiratory tract
+48	operations on rectum, rectosigmoid and perirectal tissue
+480	viral pneumonia
+482	other bacterial pneumonia
+483	pneumonia due to other specified organism
+484	pneumonia in infectious diseases classified elsewhere
+487	influenza
+488	flu d/t avian flu virus
+49	operations on anus
+491	chronic bronchitis
+492	emphysema
+493	asthma
+494	bronchiectasis
+495	extrinsic allergic alveolitis
+50	operations on liver
+506	respiratory conditions due to chemical fumes and vapors
+507	pneumonitis due to solids and liquids
+508	respiratory conditions due to other and unspecified external agents
+51	operations on gallbladder and biliary tract
+510	empyema
+511	pleurisy
+512	pneumothorax
+513	abscess of lung and mediastinum
+516	other alveolar and parietoalveolar pneumonopathy
+517	lung involvement in conditions classified elsewhere
+518	other diseases of lung
+519	other diseases of respiratory system
+52	operations on pancreas
+520	disorders of tooth development and eruption
+521	diseases of hard tissues of teeth
+522	diseases of pulp and periapical tissues
+523	gingival and periodontal diseases
+524	dentofacial anomalies, including malocclusion
+525	other diseases and conditions of the teeth and supporting structures
+526	diseases of the jaws
+527	diseases of the salivary glands
+528	diseases of the oral soft tissues, excluding lesions specific for gingiva and tongue
+529	diseases and other conditions of the tongue
+53	repair of hernia
+530	diseases of esophagus
+531	gastric ulcer
+532	duodenal ulcer
+533	peptic ulcer, site unspecified
+534	gastrojejunal ulcer
+535	gastritis and duodenitis
+536	disorders of function of stomach
+537	other disorders of stomach and duodenum
+539	complications of bariatric procedures
+54	other operations on abdominal region
+540	acute appendicitis
+543	other diseases of appendix
+55	operations on kidney
+550	inguinal hernia
+551	other hernia of abdominal cavity, with gangrene
+552	other hernia of abdominal cavity, with obstruction, but without mention of gangrene
+553	other hernia of abdominal cavity without mention of obstruction or gangrene
+555	regional enteritis
+556	ulcerative colitis
+557	vascular insufficiency of intestine
+558	other and unspecified noninfectious gastroenteritis and colitis
+56	operations on ureter
+560	intestinal obstruction without mention of hernia
+562	diverticula of intestine
+564	functional digestive disorders, not elsewhere classified
+565	anal fissure and fistula
+567	peritonitis and retroperitoneal infections
+568	other disorders of peritoneum
+569	other disorders of intestine
+57	operations on urinary bladder
+571	chronic liver disease and cirrhosis
+572	liver abscess and sequelae of chronic liver disease
+573	other disorders of liver
+574	cholelithiasis
+575	other disorders of gallbladder
+576	other disorders of biliary tract
+577	diseases of pancreas
+578	gastrointestinal hemorrhage
+579	intestinal malabsorption
+58	operations on urethra
+580	acute glomerulonephritis
+581	nephrotic syndrome
+582	chronic glomerulonephritis
+583	nephritis and nephropathy, not specified as acute or chronic
+584	acute renal failure
+588	disorders resulting from impaired renal function
+589	small kidney of unknown cause
+59	other operations on urinary tract
+590	infections of kidney
+592	calculus of kidney and ureter
+593	other disorders of kidney and ureter
+594	calculus of lower urinary tract
+595	cystitis
+596	other disorders of bladder
+597	urethritis, not sexually transmitted, and urethral syndrome
+598	urethral stricture
+599	other disorders of urethra and urinary tract
+60	operations on prostate and seminal vesicles
+600	hyperplasia of prostate
+601	inflammatory diseases of prostate
+602	other disorders of prostate
+603	hydrocele
+604	orchitis and epididymitis
+607	disorders of penis
+608	other disorders of male genital organs
+61	operations on scrotum and tunica vaginalis
+610	benign mammary dysplasias
+611	other disorders of breast
+614	inflammatory disease of ovary, fallopian tube, pelvic cellular tissue, and peritoneum
+615	inflammatory diseases of uterus, except cervix
+616	inflammatory disease of cervix, vagina, and vulva
+617	endometriosis
+618	genital prolapse
+619	fistula involving female genital tract
+62	operations on testes
+620	noninflammatory disorders of ovary, fallopian tube, and broad ligament
+621	disorders of uterus, not elsewhere classified
+622	noninflammatory disorders of cervix
+623	noninflammatory disorders of vagina
+624	noninflammatory disorders of vulva and perineum
+625	pain and other symptoms associated with female genital organs
+626	disorders of menstruation and other abnormal bleeding from female genital tract
+627	menopausal and postmenopausal disorders
+628	infertility, female
+629	other disorders of female genital organs
+63	operations on spermatic cord, epididymis, and vas deferens
+633	ectopic pregnancy
+634	spontaneous abortion
+635	legally induced abortion
+639	complications following abortion or ectopic and molar pregnancies
+64	operations on penis
+641	antepartum hemorrhage, abruptio placentae, and placenta previa
+642	hypertension complicating pregnancy, childbirth, and the puerperium
+643	excessive vomiting in pregnancy
+644	early or threatened labor
+645	late pregnancy
+646	other complications of pregnancy, not elsewhere classified
+647	infectious and parasitic conditions in the mother classifiable elsewhere, but complicating pregnancy, childbirth, or the puerperium
+648	other current conditions in the mother classifiable elsewhere, but complicating pregnancy, childbirth, or the puerperium
+649	other conditions or status of the mother complicating pregnancy, childbirth, or the puerperium
+65	operations on ovary
+651	multiple gestation
+652	malposition and malpresentation of fetus
+654	abnormality of organs and soft tissues of pelvis complicating pregnancy, childbirth, or the puerperium
+655	known or suspected fetal abnormality affecting management of mother
+656	other fetal and placental problems affecting management of mother
+657	polyhydramnios
+658	other problems associated with amniotic cavity and membranes
+659	other indications for care or intervention related to labor and delivery, not elsewhere classified
+66	operations on fallopian tubes
+660	obstructed labor
+661	abnormality of forces of labor
+663	umbilical cord complications during labor and delivery
+664	trauma to perineum and vulva during delivery
+665	other obstetrical trauma
+666	postpartum hemorrhage
+668	complications of the administration of anesthetic or other sedation in labor and delivery
+669	other complications of labor and delivery, not elsewhere classified
+67	operations on cervix
+670	major puerperal infection
+671	venous complications in pregnancy and the puerperium
+672	pyrexia of unknown origin during the puerperium
+673	obstetrical pulmonary embolism
+674	other and unspecified complications of the puerperium, not elsewhere classified
+68	other incision and excision of uterus
+680	carbuncle and furuncle
+681	cellulitis and abscess of finger and toe
+682	other cellulitis and abscess
+685	pilonidal cyst
+686	other local infections of skin and subcutaneous tissue
+69	other operations on uterus and supporting structures
+690	erythematosquamous dermatosis
+691	atopic dermatitis and related conditions
+692	contact dermatitis and other eczema
+693	dermatitis due to substances taken internally
+694	bullous dermatoses
+695	erythematous conditions
+696	psoriasis and similar disorders
+697	lichen
+698	pruritus and related conditions
+70	operations on vagina and cul-de-sac
+701	other hypertrophic and atrophic conditions of skin
+702	other dermatoses
+703	diseases of nail
+704	diseases of hair and hair follicles
+705	disorders of sweat glands
+706	diseases of sebaceous glands
+707	chronic ulcer of skin
+708	urticaria
+709	other disorders of skin and subcutaneous tissue
+71	operations on vulva and perineum
+710	diffuse diseases of connective tissue
+711	arthropathy associated with infections
+712	crystal arthropathies
+713	arthropathy associated with other disorders classified elsewhere
+714	rheumatoid arthritis and other inflammatory polyarthropathies
+715	osteoarthrosis and allied disorders
+716	other and unspecified arthropathies
+717	internal derangement of knee
+718	other derangement of joint
+719	other and unspecified disorders of joint
+720	ankylosing spondylitis and other inflammatory spondylopathies
+721	spondylosis and allied disorders
+722	intervertebral disc disorders
+723	other disorders of cervical region
+724	other and unspecified disorders of back
+726	peripheral enthesopathies and allied syndromes
+727	other disorders of synovium, tendon, and bursa
+728	disorders of muscle, ligament, and fascia
+729	other disorders of soft tissues
+73	other procedures inducing or assisting delivery
+730	osteomyelitis, periostitis, and other infections involving bone
+731	osteitis deformans and osteopathies associated with other disorders classified elsewhere
+732	osteochondropathies
+733	other disorders of bone and cartilage
+735	acquired deformities of toe
+736	other acquired deformities of limbs
+737	curvature of spine
+738	other acquired musculoskeletal deformity
+74	cesarean section and removal of fetus
+740	anencephalus and similar anomalies
+741	spina bifida
+742	other congenital anomalies of nervous system
+743	congenital anomalies of eye
+744	congenital anomalies of ear, face, and neck
+745	bulbus cordis anomalies and anomalies of cardiac septal closure
+746	other congenital anomalies of heart
+747	other congenital anomalies of circulatory system
+748	anomalies of respiratory system, congenital
+749	cleft palate and cleft lip
+75	other obstetric operations
+750	other congenital anomalies of upper alimentary tract
+751	other congenital anomalies of digestive system
+752	congenital anomalies of genital organs
+753	congenital anomalies of urinary system
+754	certain congenital musculoskeletal deformities
+755	other congenital anomalies of limbs
+756	other congenital musculoskeletal anomalies
+757	congenital anomalies of the integument
+758	chromosomal anomalies
+759	other and unspecified congenital anomalies
+76	operations on facial bones and joints
+760	fetus or newborn affected by maternal conditions which may be unrelated to present pregnancy
+761	fetus or newborn affected by maternal complications of pregnancy
+762	fetus or newborn affected by complications of placenta, cord, and membranes
+763	fetus or newborn affected by other complications of labor and delivery
+764	slow fetal growth and fetal malnutrition
+765	disorders relating to short gestation and unspecified low birthweight
+766	disorders relating to long gestation and high birthweight
+767	birth trauma
+768	intrauterine hypoxia and birth asphyxia
+77	incision, excision, and division of other bones
+770	other respiratory conditions of fetus and newborn
+771	infections specific to the perinatal period
+772	fetal and neonatal hemorrhage
+773	hemolytic disease of fetus or newborn, due to isoimmunization
+774	other perinatal jaundice
+775	endocrine and metabolic disturbances specific to the fetus and newborn
+776	hematological disorders of fetus and newborn
+777	perinatal disorders of digestive system
+778	conditions involving the integument and temperature regulation of fetus and newborn
+779	other and ill-defined conditions originating in the perinatal period
+78	other operations on bones, except facial bones
+780	general symptoms
+781	symptoms involving nervous and musculoskeletal systems
+782	symptoms involving skin and other integumentary tissue
+783	symptoms concerning nutrition, metabolism, and development
+784	symptoms involving head and neck
+785	symptoms involving cardiovascular system
+786	symptoms involving respiratory system and other chest symptoms
+787	symptoms involving digestive system
+788	symptoms involving urinary system
+789	other symptoms involving abdomen and pelvis
+79	reduction of fracture and dislocation
+790	nonspecific findings on examination of blood
+791	nonspecific findings on examination of urine
+792	nonspecific abnormal findings in other body substances
+793	nonspecific abnormal findings on radiological and other examination of body structure
+794	nonspecific abnormal results of function studies
+795	other and nonspecific abnormal cytological, histological, immunological and dna test findings
+796	other nonspecific abnormal findings
+798	sudden death, cause unknown
+799	other ill-defined and unknown causes of morbidity and mortality
+80	incision and excision of joint structures
+800	fracture of vault of skull
+801	fracture of base of skull
+802	fracture of face bones
+803	other and unqualified skull fractures
+804	multiple fractures involving skull or face with other bones
+805	fracture of vertebral column without mention of spinal cord injury
+806	fracture of vertebral column with spinal cord injury
+807	fracture of rib(s), sternum, larynx, and trachea
+808	fracture of pelvis
+81	repair and plastic operations on joint structures
+810	fracture of clavicle
+811	fracture of scapula
+812	fracture of humerus
+813	fracture of radius and ulna
+814	fracture of carpal bone(s)
+815	fracture of metacarpal bone(s)
+816	fracture of one or more phalanges of hand
+817	multiple fractures of hand bones
+819	multiple fractures involving both upper limbs, and upper limb with rib(s) and sternum
+82	operations on muscle, tendon, and fascia of hand
+820	fracture of neck of femur
+821	fracture of other and unspecified parts of femur
+822	fracture of patella
+823	fracture of tibia and fibula
+824	fracture of ankle
+825	fracture of one or more tarsal and metatarsal bones
+826	fracture of one or more phalanges of foot
+828	multiple fractures involving both lower limbs, lower with upper limb, and lower limb(s) with rib(s) and sternum
+83	operations on muscle, tendon, fascia, and bursa, except hand
+830	dislocation of jaw
+831	dislocation of shoulder
+832	dislocation of elbow
+833	dislocation of wrist
+834	dislocation of finger
+835	dislocation of hip
+836	dislocation of knee
+837	dislocation of ankle
+838	dislocation of foot
+839	other, multiple, and ill-defined dislocations
+84	other procedures on musculoskeletal system
+840	sprains and strains of shoulder and upper arm
+841	sprains and strains of elbow and forearm
+842	sprains and strains of wrist and hand
+843	sprains and strains of hip and thigh
+844	sprains and strains of knee and leg
+845	sprains and strains of ankle and foot
+846	sprains and strains of sacroiliac region
+847	sprains and strains of other and unspecified parts of back
+848	other and ill-defined sprains and strains
+85	operations on the breast
+850	concussion
+851	cerebral laceration and contusion
+852	subarachnoid, subdural, and extradural hemorrhage, following injury
+853	other and unspecified intracranial hemorrhage following injury
+854	intracranial injury of other and unspecified nature
+86	operations on skin and subcutaneous tissue
+860	traumatic pneumothorax and hemothorax
+861	injury to heart and lung
+862	injury to other and unspecified intrathoracic organs
+863	injury to gastrointestinal tract
+864	injury to liver
+865	injury to spleen
+866	injury to kidney
+867	injury to pelvic organs
+868	injury to other intra-abdominal organs
+869	internal injury to unspecified or ill-defined organs
+87	diagnostic radiology
+870	open wound of ocular adnexa
+871	open wound of eyeball
+872	open wound of ear
+873	other open wound of head
+874	open wound of neck
+875	open wound of chest (wall)
+876	open wound of back
+877	open wound of buttock
+878	open wound of genital organs (external), including traumatic amputation
+879	open wound of other and unspecified sites, except limbs
+88	other diagnostic radiology and related techniques
+880	open wound of shoulder and upper arm
+881	open wound of elbow, forearm, and wrist
+882	open wound of hand except finger(s) alone
+883	open wound of finger(s)
+884	multiple and unspecified open wound of upper limb
+885	traumatic amputation of thumb (complete) (partial)
+886	traumatic amputation of other finger(s) (complete) (partial)
+887	traumatic amputation of arm and hand (complete) (partial)
+89	interview, evaluation, consultation, and examination
+890	open wound of hip and thigh
+891	open wound of knee, leg [except thigh], and ankle
+892	open wound of foot except toe(s) alone
+893	open wound of toe(s)
+894	multiple and unspecified open wound of lower limb
+896	traumatic amputation of foot (complete) (partial)
+897	traumatic amputation of leg(s) (complete) (partial)
+900	injury to blood vessels of head and neck
+901	injury to blood vessels of thorax
+902	injury to blood vessels of abdomen and pelvis
+903	injury to blood vessels of upper extremity
+904	injury to blood vessels of lower extremity and unspecified sites
+905	late effects of musculoskeletal and connective tissue injuries
+906	late effects of injuries to skin and subcutaneous tissues
+907	late effects of injuries to the nervous system
+908	late effects of other and unspecified injuries
+909	late effects of other and unspecified external causes
+91	microscopic examination-ii
+910	superficial injury of face, neck, and scalp except eye
+911	superficial injury of trunk
+912	superficial injury of shoulder and upper arm
+913	superficial injury of elbow, forearm, and wrist
+914	superficial injury of hand(s) except finger(s) alone
+915	superficial injury of finger(s)
+916	superficial injury of hip, thigh, leg, and ankle
+917	superficial injury of foot and toe(s)
+918	superficial injury of eye and adnexa
+919	superficial injury of other, multiple, and unspecified sites
+92	nuclear medicine
+921	contusion of eye and adnexa
+922	contusion of trunk
+923	contusion of upper limb
+924	contusion of lower limb and of other and unspecified sites
+925	crushing injury of face, scalp, and neck
+926	crushing injury of trunk
+927	crushing injury of upper limb
+928	crushing injury of lower limb
+93	physical therapy, respiratory therapy, rehabilitation, and related procedures
+930	foreign body on external eye
+933	foreign body in pharynx and larynx
+934	foreign body in trachea, bronchus, and lung
+935	foreign body in mouth, esophagus, and stomach
+939	foreign body in genitourinary tract
+94	procedures related to the psyche
+941	burn of face, head, and neck
+942	burn of trunk
+943	burn of upper limb, except wrist and hand
+944	burn of wrist(s) and hand(s)
+945	burn of lower limb(s)
+946	burns of multiple specified sites
+947	burn of internal organs
+948	burns classified according to extent of body surface involved
+95	ophthalmologic and otologic diagnosis and treatment
+950	injury to optic nerve and pathways
+951	injury to other cranial nerve(s)
+952	spinal cord injury without evidence of spinal bone injury
+953	injury to nerve roots and spinal plexus
+954	injury to other nerve(s) of trunk, excluding shoulder and pelvic girdles
+955	injury to peripheral nerve(s) of shoulder girdle and upper limb
+956	injury to peripheral nerve(s) of pelvic girdle and lower limb
+957	injury to other and unspecified nerves
+958	certain early complications of trauma
+959	injury, other and unspecified
+96	nonoperative intubation and irrigation
+960	poisoning by antibiotics
+961	poisoning by other anti-infectives
+962	poisoning by hormones and synthetic substitutes
+963	poisoning by primarily systemic agents
+964	poisoning by agents primarily affecting blood constituents
+965	poisoning by analgesics, antipyretics, and antirheumatics
+966	poisoning by anticonvulsants and anti-parkinsonism drugs
+967	poisoning by sedatives and hypnotics
+968	poisoning by other central nervous system depressants and anesthetics
+969	poisoning by psychotropic agents
+97	replacement and removal of therapeutic appliances
+970	poisoning by central nervous system stimulants
+971	poisoning by drugs primarily affecting the autonomic nervous system
+972	poisoning by agents primarily affecting the cardiovascular system
+973	poisoning by agents primarily affecting the gastrointestinal system
+974	poisoning by water, mineral, and uric acid metabolism drugs
+975	poisoning by agents primarily acting on the smooth and skeletal muscles and respiratory system
+976	poisoning by agents primarily affecting skin and mucous membrane, ophthalmological, otorhinolaryngological, and dental drugs
+977	poisoning by other and unspecified drugs and medicinal substances
+98	nonoperative removal of foreign body or calculus
+980	toxic effect of alcohol
+982	toxic effect of solvents other than petroleum based
+983	toxic effect of corrosive aromatics, acids, and caustic alkalis
+985	toxic effect of other metals
+987	toxic effect of other gases, fumes, or vapors
+988	toxic effect of noxious substances eaten as food
+989	toxic effect of other substances, chiefly nonmedicinal as to source
+99	other nonoperative procedures
+991	effects of reduced temperature
+992	effects of heat and light
+994	effects of other external causes
+995	certain adverse effects not elsewhere classified
+996	complications peculiar to certain specified procedures
+997	complications affecting specified body systems, not elsewhere classified
+998	other complications of procedures, nec
+999	complications of medical care, not elsewhere classified
+E000	external cause status
+E001	activities involving walking and running
+E002	activities involving water and water craft
+E003	activities involving snow and ice
+E006	activities involving other sports and athletics played individually
+E007	activities involving other sports and athletics played as a team or group
+E008	activities involving other specified sports and athletics
+E013	activities involving personal hygiene and household maintenance
+E016	activities involving property and land maintenance, building and construction
+E019	activities involving animal care
+E029	other activity
+E800	railway accident involving collision with rolling stock
+E801	railway accident involving collision with other object
+E804	fall in, on, or from railway train
+E805	hit by rolling stock
+E806	other specified railway accident
+E811	motor vehicle traffic accident involving re-entrant collision with another motor vehicle
+E812	other motor vehicle traffic accident involving collision with motor vehicle
+E813	motor vehicle traffic accident involving collision with other vehicle
+E814	motor vehicle traffic accident involving collision with pedestrian
+E815	other motor vehicle traffic accident involving collision on the highway
+E816	motor vehicle traffic accident due to loss of control, without collision on the highway
+E817	noncollision motor vehicle traffic accident while boarding or alighting
+E818	other noncollision motor vehicle traffic accident
+E819	motor vehicle traffic accident of unspecified nature
+E820	nontraffic accident involving motor-driven snow vehicle
+E821	nontraffic accident involving other off-road motor vehicle
+E822	other motor vehicle nontraffic accident involving collision with moving object
+E823	other motor vehicle nontraffic accident involving collision with stationary object
+E824	other motor vehicle nontraffic accident while boarding and alighting
+E825	other motor vehicle nontraffic accident of other and unspecified nature
+E826	pedal cycle accident
+E827	animal-drawn vehicle accident
+E828	accident involving animal being ridden
+E829	other road vehicle accidents
+E831	accident to watercraft causing other injury
+E834	other fall from one level to another in water transport
+E835	other and unspecified fall in water transport
+E838	other and unspecified water transport accident
+E840	accident to powered aircraft at takeoff or landing
+E841	accident to powered aircraft, other and unspecified
+E849	place of occurrence
+E850	accidental poisoning by analgesics, antipyretics, and antirheumatics
+E852	accidental poisoning by other sedatives and hypnotics
+E853	accidental poisoning by tranquilizers
+E854	accidental poisoning by other psychotropic agents
+E855	accidental poisoning by other drugs acting on central and autonomic nervous system
+E858	accidental poisoning by other drugs
+E860	accidental poisoning by alcohol, not elsewhere classified
+E861	accidental poisoning by cleansing and polishing agents, disinfectants, paints, and varnishes
+E862	accidental poisoning by petroleum products, other solvents and their vapors, not elsewhere classified
+E863	accidental poisoning by agricultural and horticultural chemical and pharmaceutical preparations other than plant foods and fertilizers
+E864	accidental poisoning by corrosives and caustics, not elsewhere classified
+E865	accidental poisoning from poisonous foodstuffs and poisonous plants
+E866	accidental poisoning by other and unspecified solid and liquid substances
+E869	accidental poisoning by other gases and vapors
+E870	accidental cut, puncture, perforation, or hemorrhage during medical care
+E871	foreign object left in body during procedure
+E873	failure in dosage
+E874	mechanical failure of instrument or apparatus during procedure
+E876	other and unspecified misadventures during medical care
+E878	surgical operation and other surgical procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at the time of operation
+E879	other procedures, without mention of misadventure at the time of procedure, as the cause of abnormal reaction of patient, or of later complication
+E880	accidental fall on or from stairs or steps
+E881	accidental fall on or from ladders or scaffolding
+E883	accidental fall into hole or other opening in surface
+E884	other accidental falls from one level to another
+E885	fall on same level from slipping, tripping, or stumbling
+E886	fall on same level from collision, pushing, or shoving, by or with other person
+E890	conflagration in private dwelling
+E891	conflagration in other and unspecified building or structure
+E900	accident caused by excessive heat
+E901	accidents due to excessive cold
+E905	venomous animals and plants as the cause of poisoning and toxic reactions
+E906	other injury caused by animals
+E908	accident due to cataclysmic storms, and floods resulting from storms
+E910	accidental drowning and submersion
+E913	accidental mechanical suffocation
+E917	striking against or struck accidentally by objects or persons
+E919	accidents caused by machinery
+E920	accidents caused by cutting and piercing instruments or objects
+E921	accident caused by explosion of pressure vessel
+E922	accident caused by firearm, and air gun missile
+E923	accident caused by explosive material
+E924	accident caused by hot substance or object, caustic or corrosive material, and steam
+E925	accident caused by electric current
+E926	exposure to radiation
+E928	other and unspecified environmental and accidental causes
+E929	late effects of accidental injury
+E930	antibiotics causing adverse effects in therapeutic use
+E931	other anti-infectives causing adverse effects in therapeutic use
+E932	hormones and synthetic substitutes causing adverse effects in therapeutic use
+E933	primarily systemic agents causing adverse effects in therapeutic use
+E934	agents primarily affecting blood constituents causing adverse effects in therapeutic use
+E935	analgesics, antipyretics, and antirheumatics causing adverse effects in therapeutic use
+E936	anticonvulsants and anti-parkinsonism drugs causing adverse effects in therapeutic use
+E937	sedatives and hypnotics causing adverse effects in therapeutic use
+E938	other central nervous system depressants and anesthetics causing adverse effects in therapeutic use
+E939	psychotropic agents causing adverse effects in therapeutic use
+E940	central nervous system stimulants causing adverse effects in therapeutic use
+E941	drugs primarily affecting the autonomic nervous system causing adverse effects in therapeutic use
+E942	agents primarily affecting the cardiovascular system causing adverse effects in therapeutic use
+E943	agents primarily affecting gastrointestinal system causing adverse effects in therapeutic use
+E944	water, mineral, and uric acid metabolism drugs causing adverse effects in therapeutic use
+E945	agents primarily acting on the smooth and skeletal muscles and respiratory system causing adverse effects in therapeutic use
+E946	agents primarily affecting skin and mucous membrane, ophthalmological, otorhinolaryngological, and dental drugs causing adverse effects in therapeutic use
+E947	other and unspecified drugs and medicinal substances causing adverse effects in therapeutic use
+E949	other vaccines and biological substances causing adverse effects in therapeutic use
+E950	suicide and self-inflicted poisoning by solid or liquid substances
+E953	suicide and self-inflicted injury by hanging, strangulation, and suffocation
+E955	suicide and self-inflicted injury by firearms, air guns, and explosives
+E957	suicide and self-inflicted injuries by jumping from high place
+E958	suicide and self-inflicted injury by other and unspecified means
+E960	fight, brawl, rape
+E962	assault by poisoning
+E965	assault by firearms and explosives
+E967	perpetrator of child and adult abuse
+E968	assault by other and unspecified means
+E980	poisoning by solid or liquid substances, undetermined whether accidentally or purposely inflicted
+E982	poisoning by other gases, undetermined whether accidentally or purposely inflicted
+E985	injury by firearms, air guns and explosives, undetermined whether accidentally or purposely inflicted
+E987	falling from high place, undetermined whether accidentally or purposely inflicted
+E988	injury by other and unspecified means, undetermined whether accidentally or purposely inflicted
+E999	late effect of injury due to war operations and terrorism
+V01	contact with or exposure to communicable diseases
+V02	carrier or suspected carrier of infectious diseases
+V03	need for prophylactic vaccination and inoculation against bacterial diseases
+V04	need for prophylactic vaccination and inoculation against certain diseases
+V05	need for prophylactic vaccination and inoculation against single diseases
+V06	need for prophylactic vaccination and inoculation against combinations of diseases
+V07	need for isolation and other prophylactic measures
+V09	infection with drug-resistant microorganisms
+V10	personal history of malignant neoplasm
+V11	personal history of mental disorder
+V12	personal history of certain other diseases
+V13	personal history of other diseases
+V14	personal history of allergy to medicinal agents
+V15	other personal history presenting hazards to health
+V16	family history of malignant neoplasm
+V17	family history of certain chronic disabling diseases
+V18	family history of certain other specific conditions
+V19	family history of other conditions
+V20	health supervision of infant or child
+V22	normal pregnancy
+V23	supervision of high-risk pregnancy
+V25	encounter for contraceptive management
+V26	procreative management
+V27	outcome of delivery
+V28	encounter for antenatal screening of mother
+V29	observation and evaluation of newborns for suspected condition not found
+V30	single liveborn
+V31	twin birth, mate liveborn
+V32	twin birth, mate stillborn
+V33	twin birth, unspecified whether mate liveborn or stillborn
+V34	other multiple birth (three or more), mates all liveborn
+V40	mental and behavioral problems
+V42	organ or tissue replaced by transplant
+V43	organ or tissue replaced by other means
+V44	artificial opening status
+V45	other postprocedural states
+V46	other dependence on machines
+V48	problems with head, neck, and trunk
+V49	other conditions influencing health status
+V50	elective surgery for purposes other than remedying health states
+V53	fitting and adjustment of other device
+V54	other orthopedic aftercare
+V55	attention to artificial openings
+V56	encounter for dialysis and dialysis catheter care
+V58	encounter for other and unspecified procedures and aftercare
+V59	donors
+V60	housing, household, and economic circumstances
+V61	other family circumstances
+V62	other psychosocial circumstances
+V63	unavailability of other medical facilities for care
+V64	persons encountering health services for specific procedures, not carried out
+V65	other persons seeking consultation
+V66	convalescence and palliative care
+V67	follow-up examination
+V69	problems related to lifestyle
+V70	general medical examination
+V71	observation and evaluation for suspected conditions not found
+V72	special investigations and examinations
+V74	special screening examination for bacterial and spirochetal diseases
+V76	special screening for malignant neoplasms
+V78	special screening for disorders of blood and blood-forming organs
+V81	special screening for cardiovascular, respiratory, and genitourinary diseases
+V83	genetic carrier status
+V84	genetic susceptibility to disease
+V85	body mass index [bmi]
+V86	estrogen receptor status
+V87	other specified personal exposures and history presenting hazards to health
+V88	acquired absence of other organs and tissue
+V90	retained foreign body
+V91	multiple gestation placenta status

@@ -1,0 +1,36 @@
+code	desc
+038	septicemia
+244	acquired hypothyroidism
+250	diabetes mellitus
+272	disorders of lipoid metabolism
+276	disorders of fluid, electrolyte, and acid-base balance
+285	other and unspecified anemias
+287	purpura and other hemorrhagic conditions
+305	nondependent abuse of drugs
+33	other operations on lung and bronchus
+36	operations on vessels of heart
+37	other operations on heart and pericardium
+38	incision, excision, and occlusion of vessels
+39	other operations on vessels
+401	essential hypertension
+403	hypertensive chronic kidney disease
+410	acute myocardial infarction
+414	other forms of chronic ischemic heart disease
+424	other diseases of endocardium
+427	cardiac dysrhythmias
+428	heart failure
+45	incision, excision, and anastomosis of intestine
+507	pneumonitis due to solids and liquids
+511	pleurisy
+518	other diseases of lung
+530	diseases of esophagus
+584	acute renal failure
+585	chronic kidney disease (ckd)
+599	other disorders of urethra and urinary tract
+88	other diagnostic radiology and related techniques
+96	nonoperative intubation and irrigation
+99	other nonoperative procedures
+995	certain adverse effects not elsewhere classified
+V15	other personal history presenting hazards to health
+V45	other postprocedural states
+V58	encounter for other and unspecified procedures and aftercare
