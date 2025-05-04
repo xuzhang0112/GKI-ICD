@@ -7,7 +7,7 @@ import random
 from tqdm.auto import tqdm
 import numpy as np
 
-import ipdb
+
 import torch
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
@@ -29,55 +29,6 @@ class DescriptionDataset(Dataset):
         code_description = self.definitions[idx]
         result = self.tokenizer(
             code_description,
-            max_length=32,
-            padding="max_length",
-            truncation=True,
-            return_tensors="pt",
-        )
-        return {
-            "idx": idx,
-            "input_ids": result["input_ids"][0],
-            "attention_mask": result["attention_mask"][0],
-        }
-
-
-class SynonymDataset(Dataset):
-    def __init__(self, idx2code, code_descriptions, code_synonyms, tokenizer):
-        self.idx2code = idx2code
-        self.descriptions = code_descriptions
-        self.code2synonym = code_synonyms
-        self.total_synonyms = self.prepare_synonyms()
-        self.tokenizer = tokenizer
-
-    def __len__(self):
-        return len(self.descriptions)
-
-    def prepare_synonyms(self):
-        all_synonyms = []
-        for i in range(len(self.idx2code)):
-            code = self.idx2code[i]
-            synonyms = self.code2synonym[code]
-            if len(synonyms) == 0:
-                definition = self.descriptions[i]
-                synonyms.append(definition)
-            if len(synonyms) > 4:
-                synonyms = synonyms[:4]
-            elif len(synonyms) == 4:
-                pass
-            elif len(synonyms) == 3:
-                synonyms.append(synonyms[0])
-            elif len(synonyms) == 2:
-                synonyms.extend([synonyms[0], synonyms[1]])
-            elif len(synonyms) == 1:
-                synonyms.extend([synonyms[0], synonyms[0], synonyms[0]])
-            all_synonyms.extend(synonyms)
-        return all_synonyms
-
-    def __getitem__(self, idx):
-        synonym = self.total_synonyms[idx]
-
-        result = self.tokenizer(
-            synonym,
             max_length=32,
             padding="max_length",
             truncation=True,

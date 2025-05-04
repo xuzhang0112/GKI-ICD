@@ -1,7 +1,7 @@
 from typing import Optional
 from dataclasses import dataclass
 
-import ipdb
+
 import numpy as np
 import pandas as pd
 import torch
@@ -9,9 +9,8 @@ import torch.nn.functional as F
 import torch.utils.checkpoint
 from torch import nn
 from torch.nn import BCEWithLogitsLoss
-from transformers import AutoModel, PreTrainedModel
+from transformers import AutoModel, PreTrainedModel, RobertaModel
 from transformers.modeling_outputs import ModelOutput
-from torch_geometric.nn import GCN, GAT
 
 
 @dataclass
@@ -25,7 +24,7 @@ class Output(ModelOutput):
 
 
 class IcdCodeModel(PreTrainedModel):
-    def __init__(self, config):
+    def __init__(self, config, load_plm_weights=False):
         super().__init__(config)
         # pretrained model path
         self.model_name_or_path = config.model_name_or_path
@@ -48,19 +47,20 @@ class IcdCodeModel(PreTrainedModel):
         self.use_rdrop = config.use_rdrop
         self.rdrop_alpha = config.rdrop_alpha
 
-        # Basic Modules
-        self.text_encoder = AutoModel.from_pretrained(
-            self.model_name_or_path,
-            config=config,
-        )
+        if load_plm_weights:
+            self.text_encoder = AutoModel.from_pretrained(
+                self.model_name_or_path,
+                config=config,
+            )
+        else:
+            self.text_encoder = RobertaModel(config=config)
 
         self.retrieve_embedding = nn.Parameter(
             torch.normal(
                 mean=0.0,
                 std=self.config.initializer_range,
                 size=(self.num_embeddings, self.hidden_size),
-            ),
-            requires_grad=not config.freeze_code_query,
+            )
         )
         self.classify_embedding = nn.Parameter(
             torch.normal(
@@ -116,8 +116,11 @@ class IcdCodeModel(PreTrainedModel):
         _, chunk_size = input_ids.size()
         device = input_ids.device
         max_token_length = max(num_chunks) * chunk_size
-
+        # print(input_ids)
+        # exit()
         text_features = self.text_encoder(input_ids, attention_mask=attention_mask)[0]
+        # print(text_features)
+        # exit()
 
         chunk_idx = 0
         text_feature_list, attention_mask_list = [], []

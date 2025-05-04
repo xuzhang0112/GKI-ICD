@@ -102,6 +102,13 @@ def metric_without_threshold(pred, target, k_list=[5, 8, 15]):
 
 
 def get_code_group_mask(code2idx, code2frequency):
+    """
+    >500
+    101-500
+    51-100
+    11-50
+    1-10
+    """
     code2group = {}
     group2mask = {
         ">500": [0] * len(code2idx),

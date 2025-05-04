@@ -9,14 +9,13 @@ from functools import partial
 from tqdm.auto import tqdm
 import numpy as np
 import pandas as pd
-import ipdb
 import torch
 import torch.nn as nn
 from torch.utils.data.dataloader import DataLoader, default_collate
 from accelerate import Accelerator, DistributedDataParallelKwargs
+from swanlab.integration.accelerate import SwanLabTracker
 import transformers
 import datasets
-import wandb
 from transformers import (
     AdamW,
     AutoConfig,
@@ -25,11 +24,10 @@ from transformers import (
     get_scheduler,
     set_seed,
 )
-from torch_geometric.utils import to_undirected
 
-from dataset import EHRDataset, data_collator, DescriptionDataset, SynonymDataset
+from dataset import EHRDataset, data_collator, DescriptionDataset
 from model import IcdCodeModel, Output
-from utils import parse_args, read_pickle
+from utils import parse_args
 from evaluation import (
     metric_with_threshold,
     metric_without_threshold,
@@ -159,17 +157,6 @@ def save_pred_results(
             f.write(f"Recall: {recall}\n")
 
             if save_topk_results:
-                # for code, pos, value, pred in zip(
-                #     label_codes, label_att_pos, label_att_value, label_pred
-                # ):
-                #     if 0 < pos < len(offset_mapping) - 1:
-                #         s, e = offset_mapping[pos]
-                #         corresponding_text = raw_text[s:e]
-                #     else:
-                #         corresponding_text = "padding"
-                #     f.write(
-                #         f"{code} {code_descriptions[code2idx[code]]}\n  Att: {corresponding_text} {value} Pred: {pred}\n"
-                #     )
                 f.write(f"Topk:\n")
                 for code, pos, value, pred in zip(
                     topk_codes, topk_att_pos, topk_att_value, topk_pred
@@ -195,9 +182,40 @@ def main():
     if args.seed is not None:
         set_seed(args.seed)
 
-    # Initialize the accelerator. We will let the accelerator handle device placement for us in this example.
     ddp_kwargs = DistributedDataParallelKwargs(find_unused_parameters=True)
-    accelerator = Accelerator(kwargs_handlers=[ddp_kwargs])
+
+    if args.use_swanlab:
+        tracker = SwanLabTracker(
+            project=args.dataset,
+            experiment_name=args.name,
+        )
+        accelerator = Accelerator(
+            log_with=tracker,
+            kwargs_handlers=[ddp_kwargs],
+        )
+        accelerator.init_trackers(
+            project_name=args.dataset,
+            config={
+                "batch_size": args.per_device_train_batch_size
+                * args.gradient_accumulation_steps,
+                "max_length": args.max_length,
+                "chunk_size": args.chunk_size,
+                "use_cross_attention": args.use_cross_attention,
+                "embed_code_query": args.embed_code_query,
+                "use_guidance": args.use_guidance,
+                "use_shuffle": args.use_shuffle,
+                "use_synonyms": args.use_synonyms,
+                "use_hierarchy": args.use_hierarchy,
+                "use_sim_loss": args.use_sim_loss,
+                "lambda_sim_loss": args.lambda_sim_loss,
+                "use_rdrop": args.use_rdrop,
+                "rdrop_alpha": args.rdrop_alpha,
+                "use_biaffine": args.use_biaffine,
+            },
+        )
+
+    else:
+        accelerator = Accelerator(kwargs_handlers=[ddp_kwargs])
     # Make one log on every process with the configuration for debugging.
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -299,11 +317,6 @@ def main():
 
     # Pretrained Model
     config.model_name_or_path = args.model_name_or_path
-    # frezee code queries when embed knowledge
-    if args.embed_code_query:
-        config.freeze_code_query = args.freeze_code_query
-    else:
-        config.freeze_code_query = False
     # num_labels
     config.num_labels = len(code_list)
     # num of retrieve embeddings
@@ -321,14 +334,6 @@ def main():
     config.use_biaffine = args.use_biaffine
     config.use_rdrop = args.use_rdrop
     config.rdrop_alpha = args.rdrop_alpha
-
-    # Wandb
-    if args.use_wandb:
-        wandb.init(
-            project=args.dataset,
-            name=args.name,
-            config=config,
-        )
 
     my_collate_fn = partial(data_collator)
 
@@ -383,13 +388,8 @@ def main():
         batch_size=args.per_device_eval_batch_size,
     )
 
-    if args.num_train_epochs > 0 and not args.use_2stage:
-        model: IcdCodeModel = IcdCodeModel(config)
-    elif args.num_train_epochs > 0 and args.use_2stage:
-        model: IcdCodeModel = IcdCodeModel.from_pretrained(
-            args.pretrained_model_path,
-            config=config,
-        )
+    if args.num_train_epochs > 0:
+        model: IcdCodeModel = IcdCodeModel(config, load_plm_weights=True)
     else:
         model: IcdCodeModel = IcdCodeModel.from_pretrained(
             args.output_dir,
@@ -397,7 +397,7 @@ def main():
         )
 
     # Initialzation w/ ICD Knowledge
-    if args.num_train_epochs > 0 and args.embed_code_query and not args.use_2stage:
+    if args.num_train_epochs > 0 and args.embed_code_query:
         model.eval()
         model.to(torch.device("cuda:0"))
         for batch in description_dataloader:
@@ -534,20 +534,21 @@ def main():
                     {
                         "bce_loss": bce_loss,
                         "map": map,
-                        "def_map": guidance_map,
+                        "guideline_map": guidance_map,
                         "sim_loss": sim_loss,
                         "rdrop_loss": rdrop_loss,
                     }
                 )
-                if args.use_wandb:
-                    wandb.log(
+                if args.use_swanlab:
+                    accelerator.log(
                         {
                             "bce_loss": bce_loss,
                             "map": map,
-                            "def_map": guidance_map,
+                            "guideline_map": guidance_map,
                             "sim_loss": sim_loss,
                             "rdrop_loss": rdrop_loss,
-                        }
+                        },
+                        step=completed_steps,
                     )
 
             # Validation
@@ -570,8 +571,8 @@ def main():
             logger.info(f"dev dataset metrics: {metrics}")
             metrics = {"dev" + k: v for k, v in metrics.items()}
             metrics.update({"bce_loss_epoch": epoch_loss / num_update_steps_per_epoch})
-            if args.use_wandb:
-                wandb.log(metrics)
+            if args.use_swanlab:
+                accelerator.log(metrics, step=epoch)
             write_metrics(
                 "epoch={}".format(epoch), metrics, args.output_dir, "train_metrics.csv"
             )
@@ -631,8 +632,8 @@ def main():
                 "test_metrics.csv",
             )
             metrics = {"test" + k: v for k, v in metrics.items()}
-            if args.use_wandb:
-                wandb.log(metrics)
+            if args.use_swanlab:
+                accelerator.log(metrics, step=0)
 
         thresholds = [0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]
         for i, t in enumerate(thresholds):
@@ -644,26 +645,45 @@ def main():
             )
             metrics = {"test" + k: v for k, v in metrics.items()}
 
-            if args.use_wandb:
-                wandb.log(metrics)
-        # finish wandb
-        if args.use_wandb:
-            wandb.finish()
+            if args.use_swanlab:
+                accelerator.log(metrics, step=i)
 
         if args.save_group_results:
             # Metric by group
+            """
+            >500
+            101-500
+            51-100
+            11-50
+            1-10
+            """
             group2metric = metric_by_group(
                 all_preds, all_labels, group2mask, best_threshold
             )
-            for group, metrics in group2metric.items():
-                print(
-                    f"Codes: {group}, f1: {metrics['f1']}, precision: {metrics['precision']}, recall: {metrics['recall']}"
-                )
+
             with open(f"{args.output_dir}/group_metrics.txt", "w") as f:
-                for group, metrics in group2metric.items():
-                    f.write(
-                        f"Codes: {group}, f1: {metrics['f1']}, precision: {metrics['precision']}, recall: {metrics['recall']}\n"
+                for i, (group, metrics) in enumerate(group2metric.items()):
+                    f1, precision, recall = (
+                        metrics["f1"],
+                        metrics["precision"],
+                        metrics["recall"],
                     )
+                    f.write(
+                        f"Codes: {group}, f1: {f1}, precision: {precision}, recall: {recall}\n"
+                    )
+                    print(
+                        f"Codes: {group}, f1: {f1}, precision: {precision}, recall: {recall}"
+                    )
+                    if args.use_swanlab:
+                        accelerator.log(
+                            {
+                                f"test_f1_by_freq": f1,
+                                f"test_prec_by_freq": precision,
+                                f"test_recall_by_freq": recall,
+                            },
+                            step=i,
+                        )
+
         # Save the model if training
         if args.output_dir is not None and args.num_train_epochs > 0:
             accelerator.wait_for_everyone()
@@ -671,8 +691,9 @@ def main():
             unwrapped_model.save_pretrained(
                 args.output_dir, save_function=accelerator.save
             )
+            accelerator.end_training()
 
-        # Save Raw Text & Predicitons & Top K
+        # for Case Study
         if args.save_pred_results:
             save_pred_results(
                 all_preds,

@@ -171,6 +171,7 @@ def parse_args():
     parser.add_argument(
         "--lambda_sim_loss",
         type=float,
+        default=0.0,
     )
     parser.add_argument(
         "--code_distribution_file",
@@ -191,10 +192,6 @@ def parse_args():
     parser.add_argument(
         "--code_relation_file",
         type=str,
-    )
-    parser.add_argument(
-        "--use_bipartite_graph",
-        action="store_true",
     )
     parser.add_argument(
         "--use_cross_attention",
@@ -227,6 +224,10 @@ def parse_args():
     )
     parser.add_argument(
         "--use_wandb",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--use_swanlab",
         action="store_true",
     )
     parser.add_argument(
