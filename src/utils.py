@@ -98,6 +98,7 @@ def parse_args():
         default=5e-5,
         help="Initial learning rate (after the potential warmup period) to use.",
     )
+    parser.add_argument("--max_grad_norm", type=float, default=1.0)
     parser.add_argument(
         "--weight_decay", type=float, default=0.0, help="Weight decay to use."
     )

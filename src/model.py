@@ -1,12 +1,11 @@
 from typing import Optional
 from dataclasses import dataclass
 
-
+import ipdb
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
-import torch.utils.checkpoint
 from torch import nn
 from torch.nn import BCEWithLogitsLoss
 from transformers import AutoModel, PreTrainedModel, RobertaModel
@@ -16,7 +15,6 @@ from transformers.modeling_outputs import ModelOutput
 @dataclass
 class Output(ModelOutput):
     logits: torch.FloatTensor = None
-    loss: Optional[torch.FloatTensor] = None
     bce_loss: Optional[torch.FloatTensor] = None
     sim_loss: Optional[torch.FloatTensor] = None
     rdrop_loss: Optional[torch.FloatTensor] = None
@@ -87,7 +85,6 @@ class IcdCodeModel(PreTrainedModel):
         attention_mask=None,
         num_chunks=None,
         label=None,
-        soft_label=None,
         guidance_input_ids=None,
         guidance_attention_mask=None,
         guidance_num_chunks=None,
@@ -116,11 +113,7 @@ class IcdCodeModel(PreTrainedModel):
         _, chunk_size = input_ids.size()
         device = input_ids.device
         max_token_length = max(num_chunks) * chunk_size
-        # print(input_ids)
-        # exit()
         text_features = self.text_encoder(input_ids, attention_mask=attention_mask)[0]
-        # print(text_features)
-        # exit()
 
         chunk_idx = 0
         text_feature_list, attention_mask_list = [], []
@@ -164,13 +157,18 @@ class IcdCodeModel(PreTrainedModel):
             logits = self.classifier(retrieve_embedding, retrieved_features)
         else:
             logits = self.classifier(self.classify_embedding, retrieved_features)
+        # logits.retain_grad()
 
         if label is not None:
             bce_loss = self.bce_loss_fn(logits, label)
             if self.training and self.use_rdrop:
-                # (bs * 2, num_labels)
-                logits_a, logits_b = logits.chunk(2)
-                rdrop_loss = self.kl_loss(logits_a, logits_b)
+                if self.use_guidance:
+                    logits_a, _, logits_b, __ = logits.chunk(4)
+                else:
+                    # (bs * 2, num_labels)
+                    logits_a, logits_b = logits.chunk(2)
+                    # rdrop_loss = self.kl_loss(logits_a, logits_b)
+                rdrop_loss = self.kl_loss(logits_a, logits_b, self.num_labels)
             else:
                 rdrop_loss = 0
 
@@ -206,45 +204,53 @@ class IcdCodeModel(PreTrainedModel):
             else:
                 sim_loss = 0
 
-            loss = (
-                bce_loss
-                + self.rdrop_alpha * rdrop_loss
-                + self.lambda_sim_loss * sim_loss
-            )
         else:
             bce_loss = None
             sim_loss = None
-            loss = None
+            rdrop_loss = None
 
         return Output(
             logits=logits,
-            loss=loss,
             bce_loss=bce_loss,
             sim_loss=sim_loss,
             rdrop_loss=rdrop_loss,
             attention_weights=att_weights,
         )
 
-    def kl_loss(self, p, q):
+    def kl_loss(self, p, q, label_avg_num):
+        p = p.contiguous()
+        q = q.contiguous()
+
         p_loss = F.kl_div(
             F.log_softmax(p, dim=-1), F.softmax(q, dim=-1), reduction="none"
         )
         q_loss = F.kl_div(
             F.log_softmax(q, dim=-1), F.softmax(p, dim=-1), reduction="none"
         )
-        p_loss = p_loss.mean()
-        q_loss = q_loss.mean()
+
+        # p_loss = F.kl_div(F.logsigmoid(p), F.sigmoid(q), reduction="none")
+        # q_loss = F.kl_div(F.logsigmoid(q), F.sigmoid(p), reduction="none")
+
+        if label_avg_num is not None:
+            p_loss = (p_loss.sum(dim=1) / label_avg_num).mean()
+            q_loss = (q_loss.sum(dim=1) / label_avg_num).mean()
+        else:
+            p_loss = p_loss.mean()
+            q_loss = q_loss.mean()
 
         loss = (p_loss + q_loss) / 2
+
         return loss
 
     @torch.no_grad()
     def retrieve_embed_init(self, idx, input_ids, attention_mask):
         device = self.text_encoder.device
-        text_features = self.text_encoder(
+        code_desc_features = self.text_encoder(
             input_ids.to(device), attention_mask=attention_mask.to(device)
-        )[0].max(dim=1)[0]
-        self.retrieve_embedding[idx] = text_features
+        )[0]
+        # code_desc_features = code_desc_features.mean(dim=1)
+        code_desc_features = code_desc_features.max(dim=1)[0]
+        self.retrieve_embedding[idx] = code_desc_features
 
     @torch.no_grad()
     def classifier_embed_init(self):

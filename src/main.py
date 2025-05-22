@@ -6,6 +6,7 @@ import pickle
 import json
 from functools import partial
 
+import ipdb
 from tqdm.auto import tqdm
 import numpy as np
 import pandas as pd
@@ -304,6 +305,8 @@ def main():
         code_hierarchy = None
         # print(code_hierarchy)
         # exit()
+    # print(code_hierarchy)
+    # ipdb.set_trace()
     # Code Embedding Initilization Using Code Definition
     if args.embed_code_query:
         definition_dataset = DescriptionDataset(
@@ -450,6 +453,7 @@ def main():
             * accelerator.num_processes
             * args.gradient_accumulation_steps
         )
+        gradient_accumulation_steps = args.gradient_accumulation_steps
         max_train_steps = args.num_train_epochs * num_update_steps_per_epoch
 
         logger.info("***** Running training *****")
@@ -472,83 +476,97 @@ def main():
         completed_steps = 0
 
         # Training
+        bce_loss, sim_loss, rdrop_loss, map, guidance_map = (0.0, 0.0, 0.0, 0.0, 0.0)
         for epoch in tqdm(range(args.num_train_epochs)):
             model.train()
             epoch_loss = 0.0
-            batch_group = []
+
             for step, batch in enumerate(train_dataloader):
-                # gradient accumulation
-                batch_group.append(batch)
-                num_batch = len(batch_group)
-                if (
-                    num_batch < args.gradient_accumulation_steps
-                    and step < len(train_dataloader) - 1
-                ):
-                    continue
-                bce_loss, sim_loss, rdrop_loss, map, guidance_map = (
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
+
+                outputs: Output = model(**batch)
+                bce_loss_, sim_loss_, rdrop_loss_ = (
+                    outputs.bce_loss,
+                    outputs.sim_loss,
+                    outputs.rdrop_loss,
                 )
-                for batch in batch_group:
-                    outputs: Output = model(**batch)
-                    loss = outputs.loss
-                    accelerator.backward(loss / num_batch)
-                    bce_loss += outputs.bce_loss.item() / num_batch
-                    batch_size, num_labels = batch["label"].size(0), batch[
-                        "label"
-                    ].size(1)
-                    map += (
+                if epoch == 0:
+                    loss = bce_loss_ + args.lambda_sim_loss * sim_loss_
+                else:
+                    loss = (
+                        bce_loss_
+                        + args.lambda_sim_loss * sim_loss_
+                        + args.rdrop_alpha * rdrop_loss_
+                    )
+                accelerator.backward(loss / gradient_accumulation_steps)
+                # print(
+                #     outputs.logits.grad.max().item(), outputs.logits.grad.min().item()
+                # )
+                bce_loss += outputs.bce_loss.item() / gradient_accumulation_steps
+                batch_size, num_labels = batch["label"].size(0), batch["label"].size(1)
+                map += (
+                    multilabel_ranking_average_precision(
+                        outputs.logits.detach()[:batch_size],
+                        batch["label"].detach(),
+                        num_labels=num_labels,
+                    ).item()
+                    / gradient_accumulation_steps
+                )
+                if args.use_guidance:
+                    guidance_map += (
                         multilabel_ranking_average_precision(
-                            outputs.logits.detach()[:batch_size],
+                            outputs.logits.detach()[batch_size : batch_size * 2],
                             batch["label"].detach(),
                             num_labels=num_labels,
                         ).item()
-                        / num_batch
+                        / gradient_accumulation_steps
                     )
-                    if args.use_guidance:
-                        guidance_map += (
-                            multilabel_ranking_average_precision(
-                                outputs.logits.detach()[batch_size : batch_size * 2],
-                                batch["label"].detach(),
-                                num_labels=num_labels,
-                            ).item()
-                            / num_batch
+                    if args.use_sim_loss:
+                        sim_loss += (
+                            outputs.sim_loss.item() / gradient_accumulation_steps
                         )
-                        if args.use_sim_loss:
-                            sim_loss += outputs.sim_loss.item() / num_batch
 
-                    if args.use_rdrop:
-                        rdrop_loss += outputs.rdrop_loss.item() / num_batch
+                if args.use_rdrop:
+                    rdrop_loss += (
+                        outputs.rdrop_loss.item() / gradient_accumulation_steps
+                    )
 
-                optimizer.step()
-                lr_scheduler.step()
-                optimizer.zero_grad()
-                progress_bar.update(1)
-                completed_steps += 1
-                batch_group = []
-                epoch_loss += bce_loss
-                progress_bar.set_postfix(
-                    {
-                        "bce_loss": bce_loss,
-                        "map": map,
-                        "guideline_map": guidance_map,
-                        "sim_loss": sim_loss,
-                        "rdrop_loss": rdrop_loss,
-                    }
-                )
-                if args.use_swanlab:
-                    accelerator.log(
+                if (
+                    len(train_dataloader) * epoch + step + 1
+                ) % gradient_accumulation_steps == 0:
+                    # accelerator.clip_grad_norm_(model.parameters(), args.max_grad_norm)
+                    optimizer.step()
+                    lr_scheduler.step()
+                    optimizer.zero_grad()
+                    progress_bar.update(1)
+                    completed_steps += 1
+                    epoch_loss += bce_loss
+                    progress_bar.set_postfix(
                         {
                             "bce_loss": bce_loss,
                             "map": map,
                             "guideline_map": guidance_map,
                             "sim_loss": sim_loss,
                             "rdrop_loss": rdrop_loss,
-                        },
-                        step=completed_steps,
+                        }
+                    )
+
+                    if args.use_swanlab:
+                        accelerator.log(
+                            {
+                                "bce_loss": bce_loss,
+                                "map": map,
+                                "guideline_map": guidance_map,
+                                "sim_loss": sim_loss,
+                                "rdrop_loss": rdrop_loss,
+                            },
+                            step=completed_steps,
+                        )
+                    bce_loss, sim_loss, rdrop_loss, map, guidance_map = (
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
                     )
 
             # Validation
@@ -648,6 +666,16 @@ def main():
             if args.use_swanlab:
                 accelerator.log(metrics, step=i)
 
+        # Save the model if training
+        if args.output_dir is not None and args.num_train_epochs > 0:
+            accelerator.wait_for_everyone()
+            unwrapped_model = accelerator.unwrap_model(model)
+            unwrapped_model.save_pretrained(
+                args.output_dir, save_function=accelerator.save
+            )
+            accelerator.end_training()
+
+        # For Long-tail Analysis
         if args.save_group_results:
             # Metric by group
             """
@@ -683,15 +711,6 @@ def main():
                             },
                             step=i,
                         )
-
-        # Save the model if training
-        if args.output_dir is not None and args.num_train_epochs > 0:
-            accelerator.wait_for_everyone()
-            unwrapped_model = accelerator.unwrap_model(model)
-            unwrapped_model.save_pretrained(
-                args.output_dir, save_function=accelerator.save
-            )
-            accelerator.end_training()
 
         # for Case Study
         if args.save_pred_results:

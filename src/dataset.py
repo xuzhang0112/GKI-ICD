@@ -108,12 +108,14 @@ class EHRDataset(Dataset):
         ) = self.preprocess_text(sample["text"])
         dic["label"] = self.get_onehot_label(sample["label"])
         if self.use_guidance:
-            (
+            dic["raw_guideline"], (
                 dic["guidance_input_ids"],
                 dic["guidance_attention_mask"],
                 dic["guidance_num_chunks"],
                 label_offset_mapping,
-            ) = self.get_synthetic_sample(sample["label"], self.use_synonyms)
+            ) = self.get_synthetic_sample(
+                sample["label"], self.use_synonyms, self.use_hierarchy
+            )
         return dic
 
     def preprocess_text(self, text):
@@ -171,23 +173,23 @@ class EHRDataset(Dataset):
         return onehot_label
 
     def get_synthetic_sample(self, codes, use_synonyms=False, use_hierarchy=False):
-        code_ids = [self.code2idx[code] for code in codes]
-        if self.use_shuffle:
-            random.shuffle(code_ids)
         if use_synonyms:
             code_expressions = [
                 random.choice(self.code_synonyms[code]) for code in codes
             ]
         else:
+            code_ids = [self.code2idx[code] for code in codes]
             code_expressions = [self.code_descriptions[code_id] for code_id in code_ids]
         if use_hierarchy:
-            code_hierarchy = [self.code_hierarchy[code_id] for code_id in code_ids]
+            code_hierarchy = [self.code_hierarchy[code] for code in codes]
             code_expressions = [
                 hierarchy + ", " + code_expression
                 for code_expression, hierarchy in zip(code_expressions, code_hierarchy)
             ]
+        if self.use_shuffle:
+            random.shuffle(code_expressions)
         synthetic_sample = ". ".join(code_expressions)
-        return self.preprocess_text(synthetic_sample)
+        return synthetic_sample, self.preprocess_text(synthetic_sample)
 
 
 def data_collator(
@@ -196,6 +198,10 @@ def data_collator(
     batch = dict()
 
     # batch["idx"] = [sample["idx"] for sample in samples]
+    batch["raw_text"] = [sample["raw_text"] for sample in samples]
+    batch["raw_label"] = [sample["raw_label"] for sample in samples]
+    if "raw_guideline" in samples[0]:
+        batch["raw_guideline"] = [sample["raw_guideline"] for sample in samples]
 
     for key in [
         "input_ids",
