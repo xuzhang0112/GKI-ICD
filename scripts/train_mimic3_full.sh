@@ -1,8 +1,8 @@
-dataset=mimic3_50
-name=desc
+dataset=mimic3
+name=gki-icd
 output_dir=models/$dataset/$name
 mkdir -p $output_dir
-cat $0 > $output_dir/test.sh
+cat $0 > $output_dir/train.sh
 export CUDA_VISIBLE_DEVICES=0
 accelerate launch \
     src/main.py \
@@ -20,10 +20,22 @@ accelerate launch \
     --model_name_or_path models/RoBERTa-base-PM-M3-Voc-distill-align-hf \
     --max_length 8192 \
     --chunk_size 128 \
-    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 8 \
+    --per_device_eval_batch_size 2 \
+    --num_train_epochs 12 \
+    --num_warmup_steps 2000 \
     --use_cross_attention \
+    --embed_code_query \
+    --use_guidance \
+    --use_shuffle \
+    --use_synonyms \
+    --use_hierarchy \
+    --use_sim_loss \
+    --lambda_sim_loss 0.0 \
+    --seed 42 \
+    --use_rdrop \
+    --rdrop_alpha 5.0 \
     --find_best_threshold \
-    --save_group_results \
-    --save_pred_results \
     --output_dir $output_dir
     
