@@ -1,9 +1,9 @@
-dataset=mimic3
-name=all_no_rdrop
+dataset=mimic3_50
+name=all
 output_dir=models/$dataset/$name
 mkdir -p $output_dir
 cat $0 > $output_dir/train.sh
-export CUDA_VISIBLE_DEVICES=7
+export CUDA_VISIBLE_DEVICES=5
 accelerate launch \
     src/main.py \
     --dataset $dataset \
@@ -32,8 +32,10 @@ accelerate launch \
     --use_synonyms \
     --use_hierarchy \
     --use_sim_loss \
-    --lambda_sim_loss 0.0 \
-    --seed 42 \
+    --lambda_sim_loss 1.0 \
+    --seed 66 \
+    --use_rdrop \
+    --rdrop_alpha 10.0 \
     --use_swanlab \
     --find_best_threshold \
     --output_dir $output_dir

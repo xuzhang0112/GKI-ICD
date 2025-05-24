@@ -1,5 +1,5 @@
-dataset=mimic3
-name=plm-ca
+dataset=mimic3_50
+name=desc
 output_dir=models/$dataset/$name
 mkdir -p $output_dir
 cat $0 > $output_dir/test.sh
