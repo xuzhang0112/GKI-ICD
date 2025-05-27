@@ -1,5 +1,5 @@
 # GKI-ICD: A General Knowledge Injection Framework for ICD Coding
-Offical Code for Paper [A General Knowledge Injection Framework for ICD Coding]() 
+Offical Code for Paper [A General Knowledge Injection Framework for ICD Coding](https://arxiv.org/abs/2505.18708) 
 
 *Accepted by ACL 2025 Findings*
 
